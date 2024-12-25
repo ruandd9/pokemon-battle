@@ -129,4 +129,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 - Game Freak e Nintendo pela inspiração do Pokémon
 
 ---
-Desenvolvido com ❤️ por [seu-nome]
+Desenvolvido com ❤️ por Ruan Lobo
