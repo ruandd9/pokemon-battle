@@ -40,6 +40,9 @@ body {
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App::before {
@@ -232,4 +235,57 @@ h1 {
   background-color: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .new-battle-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .pokeball-decoration {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .new-battle-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .pokeball-decoration {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .new-battle-button {
+    width: 90%;
+    margin: 1rem auto;
+  }
 }

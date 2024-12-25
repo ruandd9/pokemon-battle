@@ -21,6 +21,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .battle-area {
@@ -423,28 +427,115 @@
     background: rgba(255, 255, 255, 0.3);
 }
 
-@media (min-width: 768px) {
-    .pokemon-info-card {
-        width: 320px;
+@media (max-width: 768px) {
+    .battle-scene {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .pokemon-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .pokemon-card {
+        min-width: unset;
+        width: 100%;
+        max-width: 300px;
     }
 
     .pokemon-sprite {
-        width: 180px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
     }
 
-    .battle-controls {
-        padding: 25px;
+    .moves-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .move-button {
+        padding: 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    .battle-log {
+        max-height: 150px;
+    }
+
+    .moves-title {
+        font-size: 0.875rem;
+    }
+
+    .current-pokemon-move {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem;
+        text-align: center;
+        opacity: 1;
+    }
+
+    .pokemon-stats {
+        font-size: 0.75rem;
+    }
+
+    .type-badge {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
     }
 }
 
-@media (min-width: 1024px) {
-    .pokemon-info-card {
-        width: 350px;
+@media (max-width: 480px) {
+    .battle-scene {
+        padding: 0.5rem;
     }
 
     .pokemon-sprite {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .pokemon-info h3 {
+        font-size: 0.875rem;
+    }
+
+    .move-button {
+        padding: 0.5rem;
+        font-size: 0.65rem;
+    }
+
+    .move-type {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .battle-log {
+        max-height: 120px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .battle-scene {
+        gap: 1rem;
+    }
+
+    .pokemon-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pokemon-card {
+        flex: 0 1 45%;
+        padding: 1rem;
+    }
+
+    .pokemon-sprite {
+        width: 100px;
+        height: 100px;
+    }
+
+    .battle-log {
+        max-height: 100px;
     }
 }
